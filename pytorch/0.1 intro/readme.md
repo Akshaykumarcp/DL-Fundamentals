@@ -9,5 +9,12 @@
 - Optimizer - train multiple epochs, different optimizers
 - Save and load models
 
+#### Notes
+- Autograd
+  - [Notes](https://pytorch.org/docs/stable/notes/autograd.html)
+  - [Documentation](https://pytorch.org/docs/stable/autograd.html)
+- torch.nn
+  - [Documentation](https://pytorch.org/docs/stable/nn.html)
+
 #### Ref
 - [1](https://pytorch.org/tutorials/beginner/basics/intro.html)
