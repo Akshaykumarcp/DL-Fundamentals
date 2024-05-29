@@ -61,10 +61,29 @@ Deep Learning Fundamentals Awareness
       - small dataset i,e less than 2000 - use batch GD
       - Mini-batch sizes: 64, 128, 256, 512, etc
       - Mini batch must fit within CPU/GPU memory
-    - Exponentially weighted averages
+    - Exponentially weighted averages (EWA)
+      - Vt = Beta 1 * Vt-1 + (1-beta 1) Thetat # Thetat is the previous temp
+        - beta 1 = 0.9: appx 10 days temp
+        - beta 1 = 0.98: appx 50 days
+        - beta 1 = 0.5: appx 2 days
+      - Bias correction
+        - Vt / 1 - beta 1t
     - GD with momentum
-    - RMSprop
-    - Adam
+      - Use EWA at the time of updating W and B
+      - Hyperparams:
+        - alpha
+        - Beta 1 # usually 0.9
+    - RMSprop (Root Mean Square Propagation)
+      - updated formula of EWA
+        - beta 2 param introduced
+      - updated formula for updating W and B
+    - Adam (Adaptive moment estimation)
+      - Combination of GD with momentum and RMSProp
+      - Hyperparameters:
+        - LR: needs to be tuned
+        - Beta 1: 0.9
+        - Beta 2: 0.999
+        - Epsilon: 10 power -8
   - Learning rate decay
     - Manual
     - Exponential
